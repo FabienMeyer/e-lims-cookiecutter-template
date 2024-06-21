@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "e_lims_cookiecutter_template"
-version = "0.0.1"
+version = "0.1.0"
 description = "E-lims Cookiecutter Template."
 readme = "README.md"
 authors = ["Fabien Meyer <fabien-meyer@outlook.com>"]
@@ -32,16 +32,6 @@ pytest-cov = "^5.0.0"
 pytest-cookies = "^0.7.0"
 ruff = "^0.4.8"
 tox = "^4.15.1"
-
-[tool.bumpversion]
-current_version = "0.0.1"
-commit = true
-tag = false
-
-[tool.bumpversion.file]
-file = "pyproject.toml"
-search = 'version = "{current_version}"'
-replace = 'version = "{new_version}"'
 
 [tool.mypy]
 follow_imports = "normal"
