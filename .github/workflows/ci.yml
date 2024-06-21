@@ -138,6 +138,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'docs/build/html/'
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
@@ -162,7 +163,6 @@ jobs:
         run: |
           poetry config cache-dir "${GITHUB_WORKSPACE}/.cache/pypoetry"
           poetry config virtualenvs.in-project true
-          
           poetry install --no-root
         
       - name: Determine if this is a tag
