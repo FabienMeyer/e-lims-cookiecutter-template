@@ -163,13 +163,12 @@ jobs:
         run: |
           poetry config cache-dir "${GITHUB_WORKSPACE}/.cache/pypoetry"
           poetry config virtualenvs.in-project true
+          
           poetry install --no-root
 
-      - name: Build package
-        run: poetry build
-
-      - name: Publish package
+      - name: Build and publish package
         env:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         run: |
+          poetry config pypi-token.pypi $PYPI_TOKEN
           poetry publish --build --username __token__ --password $PYPI_TOKEN
