@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "e-lims-cookiecutter-template"
+name = "e_lims_cookiecutter_template"
 version = "0.0.1"
 description = "E-lims Cookiecutter Template."
 readme = "README.md"
 authors = ["Fabien Meyer <fabien-meyer@outlook.com>"]
 license = "MIT"
-include = ["e-lims-cookiecutter-template/py.typed"]
+include = ["e_lims_cookiecutter_template/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.12"

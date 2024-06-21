@@ -1,11 +1,11 @@
-"""`e-lims-cookiecutter-template` tests."""
+"""`e_lims_cookiecutter_template` tests."""
 
 import pytest
 
-from e-lims-cookiecutter-template import e-lims-cookiecutter-template
+from e_lims_cookiecutter_template import e_lims_cookiecutter_template
 
 
-@pytest.fixture
+@pytest.fixture()
 def name() -> str:
     """Sample pytest fixture.
 
@@ -16,4 +16,4 @@ def name() -> str:
 
 def test_content(name: str) -> None:
     """Sample pytest test function with the pytest fixture as an argument."""
-    assert 'Hello World' in e-lims-cookiecutter-template.hello(name)
+    assert 'Hello World' in e_lims_cookiecutter_template.hello(name)

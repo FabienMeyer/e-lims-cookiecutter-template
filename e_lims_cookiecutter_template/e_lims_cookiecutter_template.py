@@ -7,4 +7,4 @@ def hello(name: str) -> str:
     >>> hello('e-lims-cookiecutter-template')
     'Hello e-lims-cookiecutter-template!'
     """
-    return f"Hello {name}!"
+    return f'Hello {name}!'

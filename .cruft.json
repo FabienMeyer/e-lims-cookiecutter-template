@@ -1,13 +1,13 @@
 {
   "template": "https://github.com/FabienMeyer/e-lims-cookiecutter.git",
-  "commit": "500ebb8a9ac6985ca34176a923e0d3c5f7bc22ec",
+  "commit": "e2a1f541752c98fbdce09707ea4d6b7a74c79b01",
   "checkout": null,
   "context": {
     "cookiecutter": {
       "full_name": "Fabien Meyer",
       "email": "fabien-meyer@outlook.com",
       "project_name": "e-lims-cookiecutter-template",
-      "project_slug": "e-lims-cookiecutter-template",
+      "project_slug": "e_lims_cookiecutter_template",
       "project_short_description": "E-lims Cookiecutter Template.",
       "version": "0.0.1",
       "license": "MIT license",

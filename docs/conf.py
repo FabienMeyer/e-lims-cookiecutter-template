@@ -1,11 +1,8 @@
-# -*- coding: utf-8 -*-
 """Sphinx configuration."""
 import os
 import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join('..', '..')))
-
-import e-lims-cookiecutter-template
 
 # -- General configuration ---------------------------------------------
 extensions = [
@@ -25,7 +22,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'e-lims-cookiecutter-template'
-package = 'e-lims-cookiecutter-template'
+package = 'e_lims_cookiecutter_template'
 author = 'Fabien Meyer'
 copyright = '2024, {}'.format(author)
 version = '0.0.1'
@@ -40,13 +37,13 @@ todo_include_todos = True
 html_theme = 'sphinx_rtd_theme'
 
 # -- Options for HTMLHelp output ---------------------------------------
-htmlhelp_basename = 'e-lims-cookiecutter-templatedoc'
+htmlhelp_basename = 'e_lims_cookiecutter_templatedoc'
 
 # -- Options for LaTeX output ------------------------------------------
 latex_elements = {}
 
 latex_documents = [
-    (master_doc, 'e-lims-cookiecutter-template.tex',
+    (master_doc, 'e_lims_cookiecutter_template.tex',
      '{} Documentation'.format(project),
      author, 'manual'),
 ]
@@ -54,17 +51,17 @@ latex_documents = [
 
 # -- Options for manual page output ------------------------------------
 man_pages = [
-    (master_doc, 'e-lims-cookiecutter-template',
+    (master_doc, 'e_lims_cookiecutter_template',
      '{} Documentation'.format(project),
      [author], 1)
 ]
 
 # -- Options for Texinfo output ----------------------------------------
 texinfo_documents = [
-    (master_doc, 'e-lims-cookiecutter-template',
+    (master_doc, 'e_lims_cookiecutter_template',
      '{} Documentation'.format(project),
      author,
-     'e-lims-cookiecutter-template',
+     'e_lims_cookiecutter_template',
      """E-lims Cookiecutter Template.""",
      'Miscellaneous'),
 ]
