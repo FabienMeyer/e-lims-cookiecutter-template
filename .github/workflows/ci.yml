@@ -164,20 +164,25 @@ jobs:
           poetry config cache-dir "${GITHUB_WORKSPACE}/.cache/pypoetry"
           poetry config virtualenvs.in-project true
           poetry install --no-root
+
+      - name: Python Semantic Release
+        uses: python-semantic-release/python-semantic-release@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
         
-      - name: Determine if this is a tag
-        id: check_tag
-        run: echo "::set-output name=is_tag::${{ startsWith(github.ref, 'refs/tags/v') && contains(github.ref, '.') && contains(github.ref, '.') && contains(github.ref, 'v') }}"
+      # - name: Determine if this is a tag
+      #   id: check_tag
+      #   run: echo "::set-output name=is_tag::${{ startsWith(github.ref, 'refs/tags/v') && contains(github.ref, '.') && contains(github.ref, '.') && contains(github.ref, 'v') }}"
 
-      - name: Build and publish package
-        if: steps.check_tag.outputs.is_tag == 'false'
-        run: |
-          poetry publish --dry-run --build
+      # - name: Build and publish package
+      #   if: steps.check_tag.outputs.is_tag == 'false'
+      #   run: |
+      #     poetry publish --dry-run --build
 
-      - name: Build and publish package
-        if: steps.check_tag.outputs.is_tag == 'true'
-        env:
-          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
-        run: |
-          poetry config pypi-token.pypi $PYPI_TOKEN
-          poetry publish --build --username __token__ --password $PYPI_TOKEN
+      # - name: Build and publish package
+      #   if: steps.check_tag.outputs.is_tag == 'true'
+      #   env:
+      #     PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+      #   run: |
+      #     poetry config pypi-token.pypi $PYPI_TOKEN
+      #     poetry publish --build --username __token__ --password $PYPI_TOKEN
