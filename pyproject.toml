@@ -1,6 +1,6 @@
 [tool.poetry]
 name = 'e_lims_cookiecutter_template'
-version = '0.1.0'
+version = '0.3.0'
 description = 'E-lims Cookiecutter Template.'
 readme = 'README.md'
 authors = ['Fabien Meyer <fabien-meyer@outlook.com>']
@@ -53,6 +53,10 @@ commit_args = ''
 
 [[tool.bumpversion.files.e_lims_cookiecutter_template]]
 filename = '__init__.py'
+
+[[tool.bumpversion.files.e_lims_cookiecutter_template]]
+filename = 'pyproject.toml'
+
 
 [tool.mypy]
 follow_imports = 'normal'
