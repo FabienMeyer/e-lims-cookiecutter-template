@@ -146,6 +146,7 @@ jobs:
   deploy-package:
     name: Deploy package
     needs: [tests, code-quality, documentation]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
